@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Bootstrap/bootstrap.css">
+    <script src="Bootstrap/bootstrap.js"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" rel="stylesheet" />
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"></script>
+
+</head>
+
+<body>
+    <div class="text-center text-dark mt-3">
+        <h1>Check some Student Info</h1>
+      </div>
+    <div class="col-11 shadow-sm col-lg-7 col-md-7 col-sm-12 mx-auto">
+        <div class="dropdown text-center mt-4">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-mdb-toggle="dropdown" aria-expanded="false">
+                Dropdown button
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li>
+                    <a class="dropdown-item" href="#" onclick="hikmah()">Hikmah</a>
+                </li>
+                <li><a class="dropdown-item" href="#" onclick="fatimah()">Fatimah</a></li>
+                <li>
+                    <a class="dropdown-item" href="#" onclick="aishah()">Aishah</a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#" onclick="ghaniyyah()">Ghaniyyah</a>
+                </li>
+                <li><a class="dropdown-item" href="#" onclick="maryam()">Maryam</a></li>
+                <li><a class="dropdown-item" href="#" onclick="faruk()">Faruk</a></li>
+                <li><a class="dropdown-item" href="#" onclick="basit()">Basit</a></li>
+                <li><a class="dropdown-item" href="#" onclick="izzat()">Izzat</a></li>
+                <li><a class="dropdown-item" href="#" onclick="adam()">Adam</a></li>
+                <li><a class="dropdown-item" href="#" onclick="ali()">Ali</a></li>
+            </ul>
+        </div>
+        <div id="show" class="col-5 mx-auto mt-5"></div>
+
+        <script>
+            class Students {
+                constructor(name, id, department, phone) {
+                    this.name = name;
+                    this.id = id;
+                    this.department = department;
+                    this.phone = phone
+                }
+                details() {
+                    show.innerHTML = `
+            <div class="card">
+              <div class="card-body">
+               <h1  class="card-title fw-bolder">The name of this student is ${this.name}</h1>
+                <p class="card-text">The id of ${this.name} is <span class = "fw-bolder"> ${this.id}.</span></p>
+                <p class="card-text">The department of ${this.name} is <span class = "fw-bolder"> ${this.department}</p>
+                <p class="card-text">The phone number of ${this.name}<span class = "fw-bolder"> ${this.phone}.</p>
+              </div>
+            </div>
+        `;
+                }
+            }
+
+            let studentOne = new Students(
+                "Hikmah",
+                2067,
+                "Agric",
+                23444,
+            );
+            let studentTwo = new Students(
+                "Fatimah",
+                5678,
+                "Biochemistry",
+                444,
+            );
+            let studentThree = new Students(
+                "Aishah",
+                578,
+                "Biochem",
+                44472,
+            );
+            let studentFour = new Students(
+                "Ghanniyah",
+                57889,
+                "Economics",
+                723,
+            );
+            let studentFive = new Students(
+                "Maryam",
+                1234,
+                "Computer science",
+                44472,
+            );
+            let studentSix = new Students(
+                "Faruk",
+                4590,
+                "Animal science",
+                9072,
+            );
+            let studentSeven = new Students(
+                "Basit",
+                123409,
+                "Software Engineering",
+                34567,
+            );
+            let studentEight = new Students(
+                "Izzat",
+                45678,
+                "Crop production",
+                9087,
+            );
+            let studentNine = new Students(
+                "Adam",
+                90234,
+                "Law",
+                3472,
+            );
+            let studentTen = new Students(
+                "Ali",
+                1234,
+                "Computer science",
+                44472,
+            );
+
+            const hikmah = () => {
+                studentOne.details();
+            };
+            const fatimah = () => {
+                studentTwo.details();
+            };
+            const aishah = () => {
+                studentThree.details();
+            };
+            const ghaniyyah = () => {
+                studentFour.details();
+            };
+            const maryam = () => {
+                studentFive.details();
+            };
+            const faruk = () => {
+                studentSix.details();
+            };
+            const basit = () => {
+                studentSeven.details();
+            };
+            const izzat = () => {
+                studentEight.details();
+            };
+            const adam = () => {
+                studentNine.details();
+            };
+            const ali = () => {
+                studentTen.details();
+            };
+        </script>
+</body>
+
+</html>
